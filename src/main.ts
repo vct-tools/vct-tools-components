@@ -9,16 +9,36 @@ import UISelect from "./UIElement/UISelect.vue";
 import UISwitch from "./UIElement/UISwitch.vue";
 import UIThrobber from "./UIElement/UIThrobber.vue";
 
-export { UIButton, UIButtonLabel, UIButtonIcon, UIField, UILargeButton, UISelect, UISwitch, UIThrobber };
+import agents from "./agents";
+import { Role, roleImages } from "./agents";
+
+import { maps, sides } from "./maps";
+
+export {
+  UIButton,
+  UIButtonLabel,
+  UIButtonIcon,
+  UIField,
+  UILargeButton,
+  UISelect,
+  UISwitch,
+  UIThrobber,
+  agents,
+  Role,
+  roleImages,
+  maps,
+  sides
+};
+
 export default {
-    install(app: App) {
-        app.component("UIButton", UIButton);
-        app.component("UIButtonLabel", UIButtonLabel);
-        app.component("UIButtonIcon", UIButtonIcon);
-        app.component("UIField", UIField);
-        app.component("UILargeButton", UILargeButton);
-        app.component("UISelect", UISelect);
-        app.component("UISwitch", UISwitch);
-        app.component("UIThrobber", UIThrobber);
-    }
-}
+  install(app: App) {
+    app.component("UIButton", UIButton);
+    app.component("UIButtonLabel", UIButtonLabel);
+    app.component("UIButtonIcon", UIButtonIcon);
+    app.component("UIField", UIField);
+    app.component("UILargeButton", UILargeButton);
+    app.component("UISelect", UISelect);
+    app.component("UISwitch", UISwitch);
+    app.component("UIThrobber", UIThrobber);
+  },
+};
