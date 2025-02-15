@@ -6,9 +6,10 @@ import UIButtonIcon from "./UIElement/UIButtonIcon.vue";
 import UIField from "./UIElement/UIField.vue";
 import UILargeButton from "./UIElement/UILargeButton.vue";
 import UISelect from "./UIElement/UISelect.vue";
+import UISwitch from "./UIElement/UISwitch.vue";
 import UIThrobber from "./UIElement/UIThrobber.vue";
 
-export { UIButton, UIButtonLabel, UIButtonIcon, UIField, UILargeButton, UISelect, UIThrobber };
+export { UIButton, UIButtonLabel, UIButtonIcon, UIField, UILargeButton, UISelect, UISwitch, UIThrobber };
 export default {
     install(app: App) {
         app.component("UIButton", UIButton);
@@ -17,6 +18,7 @@ export default {
         app.component("UIField", UIField);
         app.component("UILargeButton", UILargeButton);
         app.component("UISelect", UISelect);
+        app.component("UISwitch", UISwitch);
         app.component("UIThrobber", UIThrobber);
     }
 }
