@@ -8,6 +8,7 @@ import UILargeButton from "./UIElement/UILargeButton.vue";
 import UISelect from "./UIElement/UISelect.vue";
 import UISwitch from "./UIElement/UISwitch.vue";
 import UIThrobber from "./UIElement/UIThrobber.vue";
+import UIDialogBox from "./UIElement/UIDialogBox.vue";
 
 import agents from "./agents";
 import { Role, roleImages } from "./agents";
@@ -23,6 +24,7 @@ export {
   UISelect,
   UISwitch,
   UIThrobber,
+  UIDialogBox,
   agents,
   Role,
   roleImages,
@@ -40,5 +42,6 @@ export default {
     app.component("UISelect", UISelect);
     app.component("UISwitch", UISwitch);
     app.component("UIThrobber", UIThrobber);
+    app.component("UIDialogBox", UIDialogBox);
   },
 };
