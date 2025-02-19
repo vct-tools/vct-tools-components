@@ -9,6 +9,7 @@ import UISelect from "./UIElement/UISelect.vue";
 import UISwitch from "./UIElement/UISwitch.vue";
 import UIThrobber from "./UIElement/UIThrobber.vue";
 import UIDialogBox from "./UIElement/UIDialogBox.vue";
+import { overwolfAgentToName, overwolfMapToName, overwolfWeaponToName } from "./overwolfCompat";
 
 import agents from "./agents";
 import { Role, roleImages } from "./agents";
@@ -29,7 +30,10 @@ export {
   Role,
   roleImages,
   maps,
-  sides
+  sides,
+  overwolfAgentToName,
+  overwolfMapToName,
+  overwolfWeaponToName
 };
 
 export default {
