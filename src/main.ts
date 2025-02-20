@@ -15,6 +15,7 @@ import agents from "./agents";
 import { Role, roleImages } from "./agents";
 
 import { maps, sides } from "./maps";
+import { weapons } from "./weapons";
 
 export {
   UIButton,
@@ -33,7 +34,8 @@ export {
   sides,
   overwolfAgentToName,
   overwolfMapToName,
-  overwolfWeaponToName
+  overwolfWeaponToName,
+  weapons
 };
 
 export default {
