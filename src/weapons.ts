@@ -21,79 +21,98 @@ import VandalIcon from "./images/weapons/Vandal_icon.png";
 const weapons = [
   {
     name: "Ares",
-    icon: AresIcon
+    icon: AresIcon,
+    credits: 1600
   },
   {
     name: "Bucky",
-    icon: BuckyIcon
+    icon: BuckyIcon,
+    credits: 850
   },
   {
     name: "Bulldog",
-    icon: BulldogIcon
+    icon: BulldogIcon,
+    credits: 2050
   },
   {
     name: "Classic",
-    icon: ClassicIcon
+    icon: ClassicIcon,
+    credits: 0
   },
   {
     name: "Frenzy",
-    icon: FrenzyIcon
+    icon: FrenzyIcon,
+    credits: 450
   },
   {
     name: "Ghost",
-    icon: GhostIcon
+    icon: GhostIcon,
+    credits: 500
   },
   {
     name: "Guardian",
-    icon: GuardianIcon
+    icon: GuardianIcon,
+    credits: 2250
   },
   {
     name: "Judge",
-    icon: JudgeIcon
+    icon: JudgeIcon,
+    credits: 1850
   },
   {
     name: "Marshal",
-    icon: MarshalIcon
+    icon: MarshalIcon,
+    credits: 950
   },
   {
     name: "Melee",
-    icon: MeleeIcon
+    icon: MeleeIcon,
+    credits: 0
   },
   {
     name: "Odin",
-    icon: OdinIcon
+    icon: OdinIcon,
+    credits: 3200
   },
   {
     name: "Operator",
-    icon: OperatorIcon
+    icon: OperatorIcon,
+    credits: 4700
   },
   {
     name: "Outlaw",
-    icon: OutlawIcon
+    icon: OutlawIcon,
+    credits: 2400
   },
   {
     name: "Phantom",
-    icon: PhantomIcon
+    icon: PhantomIcon,
+    credits: 2900
   },
   {
     name: "Sheriff",
-    icon: SheriffIcon
+    icon: SheriffIcon,
+    credits: 800
   },
   {
     name: "Shorty",
-    icon: ShortyIcon
+    icon: ShortyIcon,
+    credits: 300
   },
   {
     name: "Spectre",
-    icon: SpectreIcon
+    icon: SpectreIcon,
+    credits: 1600
   },
   {
     name: "Stinger",
-    icon: StingerIcon
+    icon: StingerIcon,
+    credits: 1100
   },
   {
     name: "Vandal",
-    icon: VandalIcon
+    icon: VandalIcon,
+    credits: 2900
   }
 ];
 
