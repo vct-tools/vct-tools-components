@@ -13,7 +13,8 @@
         <slot></slot>
       </div>
       <div class="btn">
-        <UILargeButton @click="model = false">Close</UILargeButton>
+        <UILargeButton v-if="acceptButtonText" @click="emit(`accept`); model = false">{{ acceptButtonText }}</UILargeButton>
+        <UILargeButton v-if="!closeButtonHidden" @click="emit(`close`); model = false">{{ closeButtonText || "Close" }}</UILargeButton>
       </div>
     </div>
   </div>
@@ -102,17 +103,26 @@
 .btn {
   display: flex;
   justify-content: center;
+
+  gap: 10px;
 }
 </style>
 
 <script setup lang="ts">
 import UILargeButton from "./UILargeButton.vue";
 
-defineProps({
-  header: String,
-});
+defineProps<{
+  header: string;
+  acceptButtonText?: string;
+  closeButtonText?: string;
+  closeButtonHidden?: boolean;
+}>();
 
 const model = defineModel<boolean>({
   default: true,
 });
+
+defineEmits(["close", "accept"]);
+
+const emit = defineEmits(["close", "accept"]);
 </script>
