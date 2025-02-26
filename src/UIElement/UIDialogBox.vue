@@ -12,8 +12,10 @@
       <div class="content">
         <slot></slot>
       </div>
-      <div class="btn">
+      <div class="btn" v-if="acceptButtonText" style="margin-bottom: 10px;">
         <UILargeButton v-if="acceptButtonText" @click="emit(`accept`); model = false">{{ acceptButtonText }}</UILargeButton>
+      </div>
+      <div class="btn">
         <UILargeButton v-if="!closeButtonHidden" @click="emit(`close`); model = false">{{ closeButtonText || "Close" }}</UILargeButton>
       </div>
     </div>
@@ -103,8 +105,6 @@
 .btn {
   display: flex;
   justify-content: center;
-
-  gap: 10px;
 }
 </style>
 
