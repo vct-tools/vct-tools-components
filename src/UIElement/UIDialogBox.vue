@@ -122,7 +122,5 @@ const model = defineModel<boolean>({
   default: true,
 });
 
-defineEmits(["close", "accept"]);
-
 const emit = defineEmits(["close", "accept"]);
 </script>
