@@ -77,12 +77,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-type T = unknown;
-
-const props = defineProps({
-  items: Array<T>,
+const props = defineProps<{
+  items: unknown[],
   prefix: String
-});
+}>();
+
+type T = typeof props.items[number];
 
 const model = defineModel<T>();
 
