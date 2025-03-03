@@ -79,7 +79,7 @@ import { ref } from "vue";
 
 const props = defineProps<{
   items: unknown[],
-  prefix: String
+  prefix?: String
 }>();
 
 type T = typeof props.items[number];
