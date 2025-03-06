@@ -1,4 +1,4 @@
-import { App } from "vue";
+import { type App } from "vue";
 
 import UIButton from "./UIElement/UIButton.vue";
 import UIButtonLabel from "./UIElement/UIButtonLabel.vue";
