@@ -1,6 +1,6 @@
 {
   "name": "vct-tools-components",
-  "version": "0.10.04",
+  "version": "2.0.0",
   "main": "src/main.ts",
   "keywords": [],
   "author": "infinity-atom",
