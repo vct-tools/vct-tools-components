@@ -24,6 +24,7 @@ import Tejo from "./images/agents/Tejo_icon.png";
 import Viper from "./images/agents/Viper_icon.png";
 import Vyse from "./images/agents/Vyse_icon.png";
 import Yoru from "./images/agents/Yoru_icon.png";
+import Waylay from "./images/agents/Waylay_icon.png";
 
 import Duelist from "./images/agents_roles/DuelistClassSymbol.webp";
 import Controller from "./images/agents_roles/ControllerClassSymbol.webp";
@@ -118,6 +119,10 @@ import Fakeout from "./images/abilities/Yoru/fakeout.png";
 import Blindside from "./images/abilities/Yoru/blindside.png";
 import Gatecrash from "./images/abilities/Yoru/gatecrash.png";
 import DimensionalDrift from "./images/abilities/Yoru/dimensional_drift.png";
+import Refract from "./images/abilities/Waylay/refract.png";
+import Saturate from "./images/abilities/Waylay/saturate.png";
+import Lightspeed from "./images/abilities/Waylay/lightspeed.png";
+import ConvergentPaths from "./images/abilities/Waylay/convergent_paths.png";
 import SlowOrb from "./images/abilities/Sage/slow_orb.png";
 import HealingOrb from "./images/abilities/Sage/healing_orb.png";
 import BarrierOrb from "./images/abilities/Sage/barrier_orb.png";
@@ -139,26 +144,26 @@ enum Role {
   Duelist,
   Controller,
   Sentinel,
-  Initiator
+  Initiator,
 }
 
 const roleImages = [
   {
     role: Role.Duelist,
-    image: Duelist
+    image: Duelist,
   },
   {
     role: Role.Controller,
-    image: Controller
+    image: Controller,
   },
   {
     role: Role.Sentinel,
-    image: Sentinel
+    image: Sentinel,
   },
   {
     role: Role.Initiator,
-    image: Initiator
-  }
+    image: Initiator,
+  },
 ];
 
 // Generated using /scripts/CreateAgent.cjs
@@ -171,8 +176,8 @@ const agents = [
       Ability2: { name: "Wingman", icon: Wingman },
       Signature: { name: "Dizzy", icon: Dizzy },
       Ability1: { name: "Mosh Pit", icon: MoshPit },
-      Ultimate: { name: "Thrash", icon: Thrash }
-    }
+      Ultimate: { name: "Thrash", icon: Thrash },
+    },
   },
   {
     name: "Fade",
@@ -182,8 +187,8 @@ const agents = [
       Ability2: { name: "Seize", icon: Seize },
       Signature: { name: "Haunt", icon: Haunt },
       Ability1: { name: "Prowler", icon: Prowler },
-      Ultimate: { name: "Nightfall", icon: Nightfall }
-    }
+      Ultimate: { name: "Nightfall", icon: Nightfall },
+    },
   },
   {
     name: "Breach",
@@ -193,8 +198,8 @@ const agents = [
       Ability2: { name: "Flashpoint", icon: Flashpoint },
       Signature: { name: "Fault Line", icon: FaultLine },
       Ability1: { name: "Aftershock", icon: Aftershock },
-      Ultimate: { name: "Rolling Thunder", icon: RollingThunder }
-    }
+      Ultimate: { name: "Rolling Thunder", icon: RollingThunder },
+    },
   },
   {
     name: "Deadlock",
@@ -202,10 +207,10 @@ const agents = [
     role: Role.Sentinel,
     abilities: {
       Ability2: { name: "Sonic Sensor", icon: SonicSensor },
-      Signature: { name: "Barrier Mesh", icon: BarrierMesh },
-      Ability1: { name: "GravNet", icon: Gravnet },
-      Ultimate: { name: "Annihilation", icon: Annihilation }
-    }
+      Ability1: { name: "Barrier Mesh", icon: BarrierMesh },
+      Signature: { name: "GravNet", icon: Gravnet },
+      Ultimate: { name: "Annihilation", icon: Annihilation },
+    },
   },
   {
     name: "Tejo",
@@ -215,8 +220,8 @@ const agents = [
       Signature: { name: "Guided Salvo", icon: GuidedSalvo },
       Ability2: { name: "Special Delivery", icon: SpecialDelivery },
       Ultimate: { name: "Armageddon", icon: Armageddon },
-      Ability1: { name: "Stealth Drone", icon: StealthDrone }
-    }
+      Ability1: { name: "Stealth Drone", icon: StealthDrone },
+    },
   },
   {
     name: "Raze",
@@ -226,8 +231,8 @@ const agents = [
       Ability2: { name: "Blast Pack", icon: BlastPack },
       Signature: { name: "Paint Shells", icon: PaintShells },
       Ability1: { name: "Boom Bot", icon: BoomBot },
-      Ultimate: { name: "Showstopper", icon: Showstopper }
-    }
+      Ultimate: { name: "Showstopper", icon: Showstopper },
+    },
   },
   {
     name: "Chamber",
@@ -237,8 +242,8 @@ const agents = [
       Signature: { name: "Rendezvous", icon: Rendezvous },
       Ability1: { name: "Trademark", icon: Trademark },
       Ability2: { name: "Headhunter", icon: Headhunter },
-      Ultimate: { name: "Tour De Force", icon: TourDeForce }
-    }
+      Ultimate: { name: "Tour De Force", icon: TourDeForce },
+    },
   },
   {
     name: "KAY/O",
@@ -248,8 +253,8 @@ const agents = [
       Ability1: { name: "FRAG/ment", icon: Fragment },
       Ability2: { name: "FLASH/drive", icon: Flashdrive },
       Signature: { name: "ZERO/point", icon: Zeropoint },
-      Ultimate: { name: "NULL/cmd", icon: Nullcmd }
-    }
+      Ultimate: { name: "NULL/cmd", icon: Nullcmd },
+    },
   },
   {
     name: "Skye",
@@ -259,8 +264,8 @@ const agents = [
       Ability2: { name: "Trailblazer", icon: Trailblazer },
       Signature: { name: "Guiding Light", icon: GuidingLight },
       Ability1: { name: "Regrowth", icon: Regrowth },
-      Ultimate: { name: "Seekers", icon: Seekers }
-    }
+      Ultimate: { name: "Seekers", icon: Seekers },
+    },
   },
   {
     name: "Cypher",
@@ -270,8 +275,8 @@ const agents = [
       Ability2: { name: "Cyber Cage", icon: CyberCage },
       Signature: { name: "Spycam", icon: Spycam },
       Ability1: { name: "Trapwire", icon: Trapwire },
-      Ultimate: { name: "Neural Theft", icon: NeuralTheft }
-    }
+      Ultimate: { name: "Neural Theft", icon: NeuralTheft },
+    },
   },
   {
     name: "Sova",
@@ -281,8 +286,8 @@ const agents = [
       Ability2: { name: "Shock Bolt", icon: ShockBolt },
       Signature: { name: "Recon Bolt", icon: ReconBolt },
       Ability1: { name: "Owl Drone", icon: OwlDrone },
-      Ultimate: { name: "Hunter's Fury", icon: HuntersFury }
-    }
+      Ultimate: { name: "Hunter's Fury", icon: HuntersFury },
+    },
   },
   {
     name: "Killjoy",
@@ -292,8 +297,8 @@ const agents = [
       Ability1: { name: "Nanoswarm", icon: Nanoswarm },
       Ability2: { name: "ALARMBOT", icon: Alarmbot },
       Signature: { name: "TURRET", icon: Turret },
-      Ultimate: { name: "Lockdown", icon: Lockdown }
-    }
+      Ultimate: { name: "Lockdown", icon: Lockdown },
+    },
   },
   {
     name: "Harbor",
@@ -303,8 +308,8 @@ const agents = [
       Ability2: { name: "Cove", icon: Cove },
       Ability1: { name: "Cascade", icon: Cascade },
       Signature: { name: "High Tide", icon: HighTide },
-      Ultimate: { name: "Reckoning", icon: Reckoning }
-    }
+      Ultimate: { name: "Reckoning", icon: Reckoning },
+    },
   },
   {
     name: "Vyse",
@@ -314,8 +319,8 @@ const agents = [
       Ability2: { name: "Shear", icon: Shear },
       Signature: { name: "Arc Rose", icon: ArcRose },
       Ability1: { name: "Razorvine", icon: Razorvine },
-      Ultimate: { name: "Steel Garden", icon: SteelGarden }
-    }
+      Ultimate: { name: "Steel Garden", icon: SteelGarden },
+    },
   },
   {
     name: "Viper",
@@ -325,8 +330,8 @@ const agents = [
       Ability2: { name: "Poison Cloud", icon: PoisonCloud },
       Signature: { name: "Toxic Screen", icon: ToxicScreen },
       Ability1: { name: "Snake Bite", icon: SnakeBite },
-      Ultimate: { name: "Viper's Pit", icon: VipersPit }
-    }
+      Ultimate: { name: "Viper's Pit", icon: VipersPit },
+    },
   },
   {
     name: "Phoenix",
@@ -336,8 +341,8 @@ const agents = [
       Ability1: { name: "Blaze", icon: Blaze },
       Ability2: { name: "Hot Hands", icon: HotHands },
       Signature: { name: "Curveball", icon: Curveball },
-      Ultimate: { name: "Run it Back", icon: RunItBack }
-    }
+      Ultimate: { name: "Run it Back", icon: RunItBack },
+    },
   },
   {
     name: "Astra",
@@ -347,8 +352,11 @@ const agents = [
       Ability2: { name: "Nova Pulse", icon: NovaPulse },
       Signature: { name: "Nebula  / Dissipate", icon: NebulaDissipate },
       Ability1: { name: "Gravity Well", icon: GravityWell },
-      Ultimate: { name: "Astral Form / Cosmic Divide", icon: AstralFormCosmicDivide }
-    }
+      Ultimate: {
+        name: "Astral Form / Cosmic Divide",
+        icon: AstralFormCosmicDivide,
+      },
+    },
   },
   {
     name: "Brimstone",
@@ -358,8 +366,8 @@ const agents = [
       Ability1: { name: "Stim Beacon", icon: StimBeacon },
       Ability2: { name: "Incendiary", icon: Incendiary },
       Signature: { name: "Sky Smoke", icon: SkySmoke },
-      Ultimate: { name: "Orbital Strike", icon: OrbitalStrike }
-    }
+      Ultimate: { name: "Orbital Strike", icon: OrbitalStrike },
+    },
   },
   {
     name: "Iso",
@@ -369,8 +377,8 @@ const agents = [
       Ability2: { name: "Undercut", icon: Undercut },
       Ultimate: { name: "Kill Contract", icon: KillContract },
       Signature: { name: "Double Tap", icon: DoubleTap },
-      Ability1: { name: "Contingency", icon: Contingency }
-    }
+      Ability1: { name: "Contingency", icon: Contingency },
+    },
   },
   {
     name: "Clove",
@@ -380,8 +388,8 @@ const agents = [
       Ability1: { name: "Pick-me-up", icon: Pickmeup },
       Signature: { name: "Ruse", icon: Ruse },
       Ultimate: { name: "Not Dead Yet", icon: NotDeadYet },
-      Ability2: { name: "Meddle", icon: Meddle }
-    }
+      Ability2: { name: "Meddle", icon: Meddle },
+    },
   },
   {
     name: "Neon",
@@ -391,8 +399,8 @@ const agents = [
       Signature: { name: "High Gear", icon: HighGear },
       Ability2: { name: "Relay Bolt", icon: RelayBolt },
       Ability1: { name: "Fast Lane", icon: FastLane },
-      Ultimate: { name: "Overdrive", icon: Overdrive }
-    }
+      Ultimate: { name: "Overdrive", icon: Overdrive },
+    },
   },
   {
     name: "Yoru",
@@ -402,8 +410,19 @@ const agents = [
       Ability1: { name: "FAKEOUT", icon: Fakeout },
       Ability2: { name: "BLINDSIDE", icon: Blindside },
       Signature: { name: "GATECRASH", icon: Gatecrash },
-      Ultimate: { name: "DIMENSIONAL DRIFT", icon: DimensionalDrift }
-    }
+      Ultimate: { name: "DIMENSIONAL DRIFT", icon: DimensionalDrift },
+    },
+  },
+  {
+    name: "Waylay",
+    icon: Waylay,
+    role: Role.Duelist,
+    abilities: {
+      Signature: { name: "Refract", icon: Refract },
+      Ability1: { name: "Saturate", icon: Saturate },
+      Ability2: { name: "Lightspeed", icon: Lightspeed },
+      Ultimate: { name: "Convergent Paths", icon: ConvergentPaths },
+    },
   },
   {
     name: "Sage",
@@ -413,8 +432,8 @@ const agents = [
       Ability2: { name: "Slow Orb", icon: SlowOrb },
       Signature: { name: "Healing Orb", icon: HealingOrb },
       Ability1: { name: "Barrier Orb", icon: BarrierOrb },
-      Ultimate: { name: "Resurrection", icon: Resurrection }
-    }
+      Ultimate: { name: "Resurrection", icon: Resurrection },
+    },
   },
   {
     name: "Reyna",
@@ -424,8 +443,8 @@ const agents = [
       Ability2: { name: "Devour", icon: Devour },
       Signature: { name: "Dismiss", icon: Dismiss },
       Ability1: { name: "Leer", icon: Leer },
-      Ultimate: { name: "Empress", icon: Empress }
-    }
+      Ultimate: { name: "Empress", icon: Empress },
+    },
   },
   {
     name: "Omen",
@@ -435,8 +454,8 @@ const agents = [
       Ability2: { name: "Paranoia", icon: Paranoia },
       Signature: { name: "Dark Cover", icon: DarkCover },
       Ability1: { name: "Shrouded Step", icon: ShroudedStep },
-      Ultimate: { name: "From the Shadows", icon: FromTheShadows }
-    }
+      Ultimate: { name: "From the Shadows", icon: FromTheShadows },
+    },
   },
   {
     name: "Jett",
@@ -446,9 +465,9 @@ const agents = [
       Ability2: { name: "Updraft", icon: Updraft },
       Signature: { name: "Tailwind", icon: Tailwind },
       Ability1: { name: "Cloudburst", icon: Cloudburst },
-      Ultimate: { name: "Blade Storm", icon: BladeStorm }
-    }
-  }
+      Ultimate: { name: "Blade Storm", icon: BladeStorm },
+    },
+  },
 ];
 
 export default agents;

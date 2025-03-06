@@ -13,7 +13,7 @@ const path = require("path");
     const nb = await icon.arrayBuffer();
     const buf = Buffer.from(nb);
     fs.writeFileSync(
-      path.join(__dirname, "../src/assets/images/weapons/", `${weapon.displayName.replace("/", "")}_icon.png`),
+      path.join(__dirname, "../src/images/weapons/", `${weapon.displayName.replace("/", "")}_icon.png`),
         buf
     );
 

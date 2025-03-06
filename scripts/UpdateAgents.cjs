@@ -12,7 +12,7 @@ const path = require("path");
     const nb = await icon.arrayBuffer();
     const buf = Buffer.from(nb);
     fs.writeFileSync(
-      path.join(__dirname, "../src/assets/images/agents/", `${agent.displayName.replace("/", "")}_icon.png`),
+      path.join(__dirname, "../src/images/agents/", `${agent.displayName.replace("/", "")}_icon.png`),
       buf
     );
     console.log(`Saved ${agent.displayName}`);
