@@ -1,10 +1,14 @@
 <template>
-  <input type="text" v-model="model" :readonly="$props.readonly" ref="mInput" />
+  <input type="text" v-model="model" :readonly="$props.readonly" ref="mInput" :placeholder="$props.placeholder" />
 </template>
 
 <script setup lang="ts">
 defineProps({
-  readonly: Boolean
+  readonly: Boolean,
+  placeholder: {
+    type: String,
+    default: ""
+  }
 });
 
 const model = defineModel();

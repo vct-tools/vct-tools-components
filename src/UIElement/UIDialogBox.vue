@@ -1,11 +1,10 @@
 <template>
   <div class="dialog-bg" :style="model ? `` : `display: none;`"></div>
   <div class="dialog" :style="model ? `` : `display: none;`">
+    <div class="top-ornament"></div>
+    <div class="left-ornament"></div>
+    <div class="right-ornament"></div>
     <div class="container">
-      <div class="top-ornament"></div>
-      <div class="left-ornament"></div>
-      <div class="right-ornament"></div>
-
       <div class="header">
         {{ $props.header }}
       </div>
@@ -52,6 +51,10 @@
 .container {
   position: relative;
   padding: 25px 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -64,6 +67,8 @@
   width: 300px;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  width: 100%;
 }
 
 .top-ornament {
